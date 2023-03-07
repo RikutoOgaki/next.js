@@ -12,8 +12,8 @@ export default function index(){
           </Flex>
           <Box w={'80%'} margin={'0 auto'} border={'1px solid #000'} padding={'2rem'}>
               <ul>
-                <li><Link href={'/01'} className={Style.under}>smaple01</Link></li>
-                <li><Link href={'/02'} className={Style.under}>smaple02</Link></li>
+                <li><Link href={'/sample/01'} className={Style.under}>smaple01</Link></li>
+                <li><Link href={'/sample/02'} className={Style.under}>smaple02</Link></li>
               </ul>
           </Box>
         </Box>
