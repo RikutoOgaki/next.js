@@ -16,6 +16,7 @@ export default function index(){
                 <li><Link href={'/sample/02'} className={Style.under}>smaple02</Link></li>
                 <li><Link href={'/sample/03'} className={Style.under}>smaple03</Link></li>
                 <li><Link href={'/sample/04'} className={Style.under}>smaple04</Link></li>
+                <li><Link href={'/sample/05'} className={Style.under}>sample05</Link></li>
               </ul>
           </Box>
         </Box>
