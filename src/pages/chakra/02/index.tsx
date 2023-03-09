@@ -1,16 +1,25 @@
-import {Box,Center,Flex,Input,Text} from '@chakra-ui/react'
+import {Box,Center,Flex,Input,Text,VStack} from '@chakra-ui/react'
 
 export default function ChakraUI02(){
     return(
         <>
             <Box>
                 <Text as={'h1'}>レスポンス対応しているfontSizeについて</Text>
-                <Box>
-                    <Text 
-                        as={'h2'}
-                        fontSize={{base:'5xl',md:'3xl'}}
-                        >mainContents</Text>
-                </Box>
+                <Flex flexDir={'column'} justifyContent={'center'} alignItems={'center'} w={'full'} h={'100vh'}>
+                    <VStack spacing={6}>
+                    <VStack spacing="-2">
+						<Text fontFamily="Montserrat" fontSize={{ base: "sm", md: "md" }}>
+							hello
+						</Text>
+						<Text fontSize={{ base: "4xl", md: "7xl" }} letterSpacing={1} fontWeight="semibold" fontFamily="Montserrat">
+							Rikuto Ogaki
+						</Text>
+						<Text fontFamily="Montserrat" fontSize={{ base: "sm", md: "md" }}>
+							web front-end developer & design
+						</Text>
+					</VStack>
+                    </VStack>
+                </Flex>
             </Box>
         </>
     )
