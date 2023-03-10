@@ -20,7 +20,7 @@ export default function Sample08(){
                     <Text as={'h1'}>Sample08</Text>
                 </Box>
                 <Box as='div'>
-                    <Input type='text' value={state.task}
+                    <Input type='text' value={state.task} width={''}
                         onChange={(e)=> setState({
                             ...state,
                             task:e.target.value

@@ -30,6 +30,13 @@ export default function index(){
                 <li><Link href={'/chakra/02'} className={Style.under}>smaple02</Link></li>
               </ul>
           </Box>
+          <Box w={'80%'} margin={'0 auto'} border={'1px solid #000'} padding={'2rem'}>
+              <Text as={'p'}>chakra-UI Template</Text>
+              <ul>
+                <li><Link href={'/first/map'} className={Style.under}>mapについて</Link></li>
+                <li><Link href={'/first/filter'} className={Style.under}>filterについて</Link></li>
+              </ul>
+          </Box>
         </Box>
     </>
   )
