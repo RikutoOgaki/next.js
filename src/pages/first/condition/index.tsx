@@ -55,13 +55,6 @@ export default function Condition(){
 
 
     // ＊比較して値や、型が同じじゃなければtrueが返る！！！
-    
-    
-    
-    
-    
-    
-    
 
 
     return(
