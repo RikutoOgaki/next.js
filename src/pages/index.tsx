@@ -35,6 +35,7 @@ export default function index(){
               <ul>
                 <li><Link href={'/first/map'} className={Style.under}>mapについて</Link></li>
                 <li><Link href={'/first/filter'} className={Style.under}>filterについて</Link></li>
+                <li><Link href={'/first/condition'} className={Style.under}>記号とキーワード</Link></li>
               </ul>
           </Box>
         </Box>
