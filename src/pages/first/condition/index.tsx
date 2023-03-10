@@ -33,11 +33,32 @@ export default function Condition(){
 
     // console.log(1 === '1');
     // そもそも文字型と数値型を比較しているのでfalseが返る
-    
+
     // console.log(0 === false);
     // 数値型と理論型を比較しているのでfalseが返る
 
     // ＊厳格等価演算子には型変換はない
+
+
+    // 厳格不等価演算子
+    // console.log(1 !== 1);
+    // 数値、型までもが同じなのでfalseが返る
+
+    // console.log('hello' !== 'hello');
+    // 文字数、文字の種類、文字の並び順までもが一緒なのでfalseが返る
+
+    // console.log('1' !== 1);
+    // 比較しても型が異なっているので同じ値とみなされないのでtrueが返る
+
+    // console.log(0 !== false);
+    // オペランドが違うのでtrueが返る
+
+
+    // ＊比較して値や、型が同じじゃなければtrueが返る！！！
+    
+    
+    
+    
     
     
     
