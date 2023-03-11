@@ -40,6 +40,13 @@ export default function index(){
                 <li><Link href={'/first/condition'} className={Style.under}>記号とキーワード</Link></li>
               </ul>
           </Box>
+          <Box w={'80%'} margin={'0 auto'} border={'1px solid #000'} padding={'2rem'}>
+              <Text as={'p'}>chakra-UI Template</Text>
+              <ul>
+                <li><Link href={'/properness/01'} className={Style.under}>適当01</Link></li>
+                <li><Link href={'/properness/02'} className={Style.under}>適当02</Link></li>
+              </ul>
+          </Box>
         </Box>
     </>
   )
