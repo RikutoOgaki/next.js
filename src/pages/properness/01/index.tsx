@@ -14,6 +14,7 @@ export default function Number01(){
     return(
         <>
             <Box>
+                <Text as={'h2'}>{state.count}</Text>
                 <Input type='button' value='+'
                     onClick={()=> setState({
                         ...state,
