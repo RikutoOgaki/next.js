@@ -24,6 +24,10 @@ export default function index() {
             <li><Link href={'/sample/09'} className={Style.under}>sample09</Link></li>
             <li><Link href={'/sample/10'} className={Style.under}>sample10</Link></li>
             <li><Link href={'/sample/11'} className={Style.under}>sample11</Link></li>
+            <li><Link href={'/sample/12'} className={Style.under}>sample12</Link></li>
+            <li><Link href={'/sample/13'} className={Style.under}>sample13</Link></li>
+            <li><Link href={'/sample/14'} className={Style.under}>sample14</Link></li>
+            <li><Link href={'/sample/15'} className={Style.under}>sample15</Link></li>
           </ul>
         </Box>
         <Box w={'80%'} margin={'0 auto'} border={'1px solid #000'} padding={'2rem'}>
