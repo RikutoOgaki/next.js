@@ -20,7 +20,7 @@ export default function Number02() {
             <Flex justifyContent={'center'} alignItems={'center'} w={'100%'} h={'100vh'}>
                 <Box>
                     <Box>
-                        <Input type={'text'} value={state.task} w={'20em'}
+                        <Input type={'text'} value={state.task} w={'20em'} textAlign={'center'}
                             onChange={(e) => setState({
                                 ...state,
                                 task: e.target.value
@@ -37,8 +37,9 @@ export default function Number02() {
                         <Box w={'35em'} h={'30em'} border={'1px solid #000'} borderRadius={'15px'} textAlign={'center'} overflow={'scroll'}>
                             {state.list.map((v, idx) =>
                                 <Box key={idx} display={'flex'} justifyContent={'center'} margin={'1em'}>
+                                    <Text as={'p'}>{idx}</Text>
                                     <Text as={'p'} w={'20em'} lineHeight={10}>{v}</Text>
-                                    <Input type={'button'} value='削除' w={'10em'} appearance={'none'}
+                                    <Input type={'button'} value='削除' w={'10em'}
                                         onClick={() => setState({
                                             ...state,
                                             list: state.list.filter((v, idx2) => idx !== idx2)
