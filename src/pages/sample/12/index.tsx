@@ -20,7 +20,7 @@ function Menu(props: MenuProps) {
     return (
         <>
             <Box border={'1px solid #000'}>
-                <button
+                <button className={Style.btn}
                     onClick={() => setState({
                         ...state,
                         flag: !state.flag
