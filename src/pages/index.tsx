@@ -39,6 +39,7 @@ export default function index() {
             <li><Link href={'/chakra/01'} className={Style.under}>smaple01</Link></li>
             <li><Link href={'/chakra/02'} className={Style.under}>smaple02</Link></li>
             <li><Link href={'/chakra/03'} className={Style.under}>smaple03</Link></li>
+            <li><Link href={'/chakra/04'} className={Style.under}>smaple04</Link></li>
           </ul>
         </Box>
         <Box w={'80%'} margin={'0 auto'} border={'1px solid #000'} padding={'2rem'}>
