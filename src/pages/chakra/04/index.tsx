@@ -17,10 +17,10 @@ export default function Chakra04() {
     return (
         <>
             <TableContainer>
-                <Table>
-                    <Thead >
+                <Table border={'1px solid #000'}>
+                    <Thead>
                         <Tr>
-                            <Th colSpan={5} textAlign={'center'}>Time Table</Th>
+                            <Th colSpan={5} textAlign={'center'} bg={'#000'} color={'#fff'}>Time Table</Th>
                         </Tr>
                     </Thead>
                     <Tbody>
@@ -32,32 +32,39 @@ export default function Chakra04() {
                             <Td textAlign={'center'}>金曜日</Td>
                         </Tr>
                         <Tr>
-                            <Td textAlign={'center'}>月曜日</Td>
-                            <Td textAlign={'center'}>火曜日</Td>
-                            <Td textAlign={'center'}>水曜日</Td>
-                            <Td textAlign={'center'}>木曜日</Td>
-                            <Td textAlign={'center'}>金曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>月曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>火曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>水曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>木曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>金曜日</Td>
                         </Tr>
                         <Tr>
-                            <Td textAlign={'center'}>月曜日</Td>
-                            <Td textAlign={'center'}>火曜日</Td>
-                            <Td textAlign={'center'}>水曜日</Td>
-                            <Td textAlign={'center'}>木曜日</Td>
-                            <Td textAlign={'center'}>金曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>月曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>火曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>水曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>木曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>金曜日</Td>
                         </Tr>
                         <Tr>
-                            <Td textAlign={'center'}>月曜日</Td>
-                            <Td textAlign={'center'}>火曜日</Td>
-                            <Td textAlign={'center'}>水曜日</Td>
-                            <Td textAlign={'center'}>木曜日</Td>
-                            <Td textAlign={'center'}>金曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>月曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>火曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>水曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>木曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>金曜日</Td>
                         </Tr>
                         <Tr>
-                            <Td textAlign={'center'}>月曜日</Td>
-                            <Td textAlign={'center'}>火曜日</Td>
-                            <Td textAlign={'center'}>水曜日</Td>
-                            <Td textAlign={'center'}>木曜日</Td>
-                            <Td textAlign={'center'}>金曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>月曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>火曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>水曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>木曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>金曜日</Td>
+                        </Tr>
+                        <Tr>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>月曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>火曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>水曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>木曜日</Td>
+                            <Td textAlign={'center'} w={'10em'} h={'7em'}>金曜日</Td>
                         </Tr>
                     </Tbody>
                     <Tfoot>
