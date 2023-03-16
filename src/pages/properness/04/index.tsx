@@ -13,7 +13,6 @@ export default function Number04() {
         console.log(tr);
     }
 
-    revesi.innerHTML = tr
 
 
 
