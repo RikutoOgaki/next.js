@@ -32,6 +32,7 @@ export default function index() {
             <li><Link href={'/sample/17'} className={Style.under}>sample17</Link></li>
             <li><Link href={'/sample/18'} className={Style.under}>sample18</Link></li>
             <li><Link href={'/sample/19'} className={Style.under}>sample19</Link></li>
+            <li><Link href={'/sample/20'} className={Style.under}>sample20</Link></li>
           </ul>
         </Box>
         <Box w={'80%'} margin={'0 auto'} border={'1px solid #000'} padding={'2rem'}>
