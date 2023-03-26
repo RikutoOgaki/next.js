@@ -59,6 +59,8 @@ export default function index() {
             <li><Link href={'/properness/02'} className={Style.under}>適当02</Link></li>
             <li><Link href={'/properness/03'} className={Style.under}>適当03</Link></li>
             <li><Link href={'/properness/04'} className={Style.under}>適当04</Link></li>
+            <li><Link href={'/properness/05'} className={Style.under}>適当05</Link></li>
+            <li><Link href={'/properness/06'} className={Style.under}>カレンダー</Link></li>
           </ul>
         </Box>
       </Box>
