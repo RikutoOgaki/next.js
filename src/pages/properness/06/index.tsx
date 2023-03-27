@@ -11,7 +11,7 @@ type State = {
 export default function Sample06() {
 
     const d = new Date
-    const [state, setState] = useState({
+    const [state, setState] = useState<State>({
         year: d.getFullYear(),
         month: d.getMonth() + 1
     })
