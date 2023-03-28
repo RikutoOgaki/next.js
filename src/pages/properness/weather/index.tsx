@@ -20,7 +20,7 @@ export default function weather() {
                 console.log(json);
                 setState({
                     ...state,
-                    weather: json.weather.main
+                    weather: json.weather[0].description
                 })
             })
     }, [])
@@ -28,7 +28,7 @@ export default function weather() {
     return (
         <>
             <Box>
-                <Text></Text>
+                <Text>{state.weather}</Text>
             </Box>
         </>
     )
