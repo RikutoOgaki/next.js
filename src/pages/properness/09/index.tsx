@@ -1,4 +1,5 @@
 import { Box, Text, Flex } from '@chakra-ui/react'
+import { useCustomHook } from './hook'
 import Header from './components/Header'
 import style from '@/styles/09/index.module.css'
 
@@ -6,21 +7,29 @@ import style from '@/styles/09/index.module.css'
 // 天気のさまざまな情報はstateで管理する
 
 export default function Number09() {
+
+    const [state] = useCustomHook()
+
+
     return (
         <>
             <Box w={'100%'} h={'100vh'} className={style.body}>
                 <Header />
                 <Box as='main'>
-                    <Text>２月１日の東京の天気</Text>
+                    <Text padding={'10rem 0 0 4rem'} color={'#fff'}>
+                        <Text as='span' fontSize={'2rem'}>2</Text>
+                        月<Text as={'span'} fontSize={'2rem'}>1</Text>
+                        日の<Text as='span' fontSize={'2rem'}>東京</Text>
+                    </Text>
                     <Flex w={'100%'} h={'100%'} justifyContent={'center'} alignItems={'center'}>
                         <Box>
                             <Box className={style.boll}></Box>
                         </Box>
-                        <Box>
-                            <Text as={'p'} className={style.font}>天候</Text>
-                            <Text as={'p'}>気温</Text>
-                            <Text as={'p'}>気温</Text>
-                        </Box>
+                        <Flex flexDir={'column'} justifyContent={'center'} gap={'2rem'} margin={'0 3rem 0 0'}>
+                            <Text as={'p'} fontSize={'1.2rem'} color={'#fff'} paddingTop={'5rem'}>天候:{state.weather}</Text>
+                            <Text as={'p'} fontSize={'1.2rem'} color={'#fff'}>気温:{state.temp}℃</Text>
+                            <Text as={'p'} fontSize={'1.2rem'} color={'#fff'}>湿度:{state.humidity}%</Text>
+                        </Flex>
                     </Flex>
                 </Box>
             </Box>
