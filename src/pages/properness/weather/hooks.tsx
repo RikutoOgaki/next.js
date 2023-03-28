@@ -9,7 +9,7 @@ type State = {
 
 
 export function useCustomHook() {
-    const [state, setState] = useState({
+    const [state, setState] = useState<State>({
         weather: '',
         humidity: 0,
         temp: 0
@@ -25,7 +25,7 @@ export function useCustomHook() {
                         ...activeState,
                         weather: json.weather[0].description,
                         humidity: json.main.humidity,
-                        temp: json.main.temp_max - 273.15
+                        temp: Math.round(json.main.temp_max - 273.15)
                     }
                 })
             })
