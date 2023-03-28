@@ -1,34 +1,20 @@
 import { useEffect, useState } from 'react'
 import { Box, Flex, Text } from '@chakra-ui/react'
+import { useCustomHook } from './hooks'
 
 export default function weather() {
 
-    const [state, setState] = useState({
-        weather: '',
-        list: []
-    })
-
-    // weatherで天候が取れる
-    // 
-
-    useEffect(() => {
-        const weather = 'https://api.openweathermap.org/data/2.5/weather?lat=36.34&lon=130.99&appid=4f17ae2f33d384ade5f214837f2b4d3d'
-        fetch(weather)
-            .then(res => res.json())
-            .then(json => {
-                console.log(json.weather[0].main);
-                console.log(json);
-                setState({
-                    ...state,
-                    weather: json.weather[0].description
-                })
-            })
-    }, [])
+    const [state] = useCustomHook()
 
     return (
         <>
             <Box>
+                <Text>天候</Text>
                 <Text>{state.weather}</Text>
+                <Text>気温</Text>
+                <Text>{state.temp}</Text>
+                <Text>湿度</Text>
+                <Text>{state.humidity}</Text>
             </Box>
         </>
     )
