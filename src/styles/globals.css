@@ -1,4 +1,5 @@
-body{
+html,body{
+  font-size: 62.5%;
   list-style: none;
   text-decoration: none;
   margin: 0;

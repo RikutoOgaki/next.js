@@ -1,0 +1,46 @@
+.body {
+    background: linear-gradient(#529DF5, #A9FAFF, #EFEFEF);
+}
+
+.boll {
+    width: 150px;
+    height: 150px;
+    margin: 150px 3rem;
+    border-radius: 50%;
+    position: relative;
+    background: tomato;
+    box-shadow: -15px -8px 30px 10px rgba(0, 0, 0, .5) inset;
+    animation: motion 5s infinite ease-in-out;
+}
+
+@keyframes motion {
+    0% {
+        transform: rotateY(-20deg) translateY(10px);
+        box-shadow: -15px -8px 30px 10px rgba(0, 0, 0, .5) inset;
+    }
+
+    50% {
+        transform: rotateY(0deg) translateY(5px);
+        box-shadow: 15px 8px -30px -10px rgba(0, 0, 0, .5) inset;
+    }
+
+    100% {
+        transform: rotateY(-20deg) translateY(10px);
+        box-shadow: -15px -8px 30px 10px rgba(0, 0, 0, .5) inset;
+    }
+}
+
+.boll::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    margin: auto;
+    width: 90px;
+    height: 4px;
+    border-radius: 50%;
+    background: #000;
+    filter: blur(4px);
+    z-index: -1;
+}
