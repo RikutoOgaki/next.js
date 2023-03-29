@@ -55,6 +55,14 @@ export default function index() {
         <Box w={'80%'} margin={'0 auto'} border={'1px solid #000'} padding={'2rem'}>
           <Text as={'p'}>chakra-UI Template</Text>
           <ul>
+            <li><Link href={'/ReactComponents/01'} className={Style.under}>01</Link></li>
+            <li><Link href={'/ReactComponents/02'} className={Style.under}>02</Link></li>
+            <li><Link href={'/ReactComponents/03'} className={Style.under}>03</Link></li>
+          </ul>
+        </Box>
+        <Box w={'80%'} margin={'0 auto'} border={'1px solid #000'} padding={'2rem'}>
+          <Text as={'p'}>chakra-UI Template</Text>
+          <ul>
             <li><Link href={'/properness/01'} className={Style.under}>適当01</Link></li>
             <li><Link href={'/properness/02'} className={Style.under}>適当02</Link></li>
             <li><Link href={'/properness/03'} className={Style.under}>適当03</Link></li>
