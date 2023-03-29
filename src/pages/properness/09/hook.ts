@@ -20,12 +20,30 @@ export function useCustomHook() {
         fetch(weather)
             .then(res => res.json())
             .then(json => {
-                setState((activeState) => {
-                    return {
-                        ...activeState,
-                        weather: json.weather[0].description,
-                        humidity: json.main.humidity,
-                        temp: Math.round(json.main.temp_max - 273.15)
+                setState(() => {
+                    if(json.weather[0].description === 'clear sky' ){
+                        return{
+                            ...state,
+                            weather: '晴れ',
+                            humidity: json.main.humidity,
+                            temp: Math.round(json.main.temp_max - 273.15)
+                        }
+                    }
+                    else if(json.weather[0].description === 'rain'){
+                        return{
+                            ...state,
+                            weather: '雨',
+                            humidity: json.main.humidity,
+                            temp: Math.round(json.main.temp_max - 273.15)
+                        }
+                    }
+                    else{
+                        return{
+                            ...state,
+                            weather: '雨',
+                            humidity: json.main.humidity,
+                            temp: Math.round(json.main.temp_max - 273.15)
+                        }
                     }
                 })
             })
