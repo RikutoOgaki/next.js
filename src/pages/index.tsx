@@ -64,6 +64,7 @@ export default function index() {
             <li><Link href={'/properness/07'} className={Style.under}>適当6</Link></li>
             <li><Link href={'/properness/08'} className={Style.under}>適当7</Link></li>
             <li><Link href={'/properness/09'} className={Style.under}>適当8</Link></li>
+            <li><Link href={'/properness/10'} className={Style.under}>適当9</Link></li>
             <li><Link href={'/properness/weather'} className={Style.under}>天気予報</Link></li>
           </ul>
         </Box>
