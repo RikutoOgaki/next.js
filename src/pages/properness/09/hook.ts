@@ -20,12 +20,14 @@ export function useCustomHook() {
         fetch(weather)
             .then(res => res.json())
             .then(json => {
+                console.log(json);
                 setState(() => {
                     if(json.weather[0].description === 'clear sky' ){
                         return{
                             ...state,
                             weather: '晴れ',
                             humidity: json.main.humidity,
+                            temp:Math.ceil(json.main.temp-273.15)
                         }
                     }
                     else if(json.weather[0].description === 'rain'){
@@ -33,6 +35,7 @@ export function useCustomHook() {
                             ...state,
                             weather: '雨',
                             humidity: json.main.humidity,
+                            temp:Math.ceil(json.main.temp-273.15)
                         }
                     }
                     else{
@@ -40,19 +43,8 @@ export function useCustomHook() {
                             ...state,
                             weather: '曇り',
                             humidity: json.main.humidity,
+                            temp:Math.ceil(json.main.temp-273.15)
                         }
-                    }
-                })
-            })
-        const temphumidity = 'https://api.open-meteo.com/v1/forecast?latitude=35.69&longitude=139.69&hourly=temperature_2m&daily=temperature_2m_max&timezone=Asia%2FTokyo'
-        fetch(temphumidity)
-            .then(res => res.json())
-            .then(json => {
-                console.log(json.daily.temperature_2m_max[0]);
-                setState(()=>{
-                    return{
-                        ...state,
-                        temp:json.daily.temperature_2m_max[0]
                     }
                 })
             })
