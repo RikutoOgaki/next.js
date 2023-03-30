@@ -28,9 +28,9 @@ export default function Number09() {
                             <Box className={style.boll}></Box>
                         </Box>
                         <Flex flexDir={'column'} justifyContent={'center'} gap={'2rem'} margin={'0 3rem 0 0'}>
-                            <Text as={'p'} fontSize={'1.2rem'} color={'#fff'} paddingTop={'5rem'}>天候:{state.weather}</Text>
-                            <Text as={'p'} fontSize={'1.2rem'} color={'#fff'}>気温:{state.temp}℃</Text>
-                            <Text as={'p'} fontSize={'1.2rem'} color={'#fff'}>湿度:{state.humidity}%</Text>
+                            <Text as={'p'} fontSize={'1.6rem'} color={'#fff'} paddingTop={'5rem'} fontWeight={'bold'}>天候:{state.weather}</Text>
+                            <Text as={'p'} fontSize={'1.6rem'} color={'#fff'} fontWeight={'bold'}>気温:{state.temp}℃</Text>
+                            <Text as={'p'} fontSize={'1.6rem'} color={'#fff'} fontWeight={'bold'}>湿度:{state.humidity}%</Text>
                         </Flex>
                     </Flex>
                 </Box>
