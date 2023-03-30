@@ -1,5 +1,5 @@
 import { Box, Text, Flex } from '@chakra-ui/react'
-import { useCustomHook } from './hook'
+import { useCustomHook } from './hook/hook'
 import { useState } from 'react'
 import Header from './components/Header'
 import style from '@/styles/09/index.module.css'
