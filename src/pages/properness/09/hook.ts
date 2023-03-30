@@ -8,6 +8,9 @@ type State = {
 }
 
 
+// APIのリンクを配列で持たせて、選択した都市をfetchするようにする
+// 予想 都市名とリンクが一致するようにkeyなどを一致させてややる
+
 export function useCustomHook() {
     const [state, setState] = useState<State>({
         weather: '',
