@@ -7,29 +7,11 @@ import style from '@/styles/09/index.module.css'
 // 立体的な天気のアイコンを作る
 // 天気のさまざまな情報はstateで管理する
 
-type Menu = {
-    flg: boolean,
-    children: React.ReactNode
-}
+
 
 export default function Number09() {
 
-
     const [state] = useCustomHook()
-
-    function Menu(props: Menu) {
-        const [state, setState] = useState({
-            flg: props.flg
-        })
-        return (
-            <>
-                <Box>
-
-                </Box>
-            </>
-        )
-    }
-
 
     return (
         <>
