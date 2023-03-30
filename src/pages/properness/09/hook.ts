@@ -40,7 +40,7 @@ export function useCustomHook() {
                     else{
                         return{
                             ...state,
-                            weather: '雨',
+                            weather: '曇り',
                             humidity: json.main.humidity,
                             temp: Math.round(json.main.temp_max - 273.15)
                         }
