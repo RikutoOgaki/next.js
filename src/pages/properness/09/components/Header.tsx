@@ -35,12 +35,22 @@ export default function Header() {
                         <Text as={'span'} w={'4rem'} border={'2px solid #fff'}></Text>
                         <Text as={'span'} w={'4rem'} border={'2px solid #fff'}></Text>
                         <Flex
-                            className={style.hide}
+                            className={!state.flg ? style.hide : undefined}
                             flexDir={'column'}
-                            justifyContent={'flex-start'}
-                            // alignItems={'right'}
                             color={'#fff'}
-                        >{props.children}</Flex>
+
+                        >
+                            <Text>ホーム</Text>
+                            <Text>今の現状</Text>
+                            <Text>プロフィール</Text>
+                            <Text>設定</Text>
+                            <Text
+                                onClick={() => setState({
+                                    ...state,
+                                    flg: !state.flg
+                                })}
+                            >→戻る</Text>
+                        </Flex>
                     </Flex>
                 </Box>
             </>
@@ -52,11 +62,7 @@ export default function Header() {
                 <header>
                     <Flex justifyContent={'flex-end'} w={'full'} h={'full'}>
                         <Menu flg={true}>
-                            <Text>ホーム</Text>
-                            <Text>今の現状</Text>
-                            <Text>プロフィール</Text>
-                            <Text>設定</Text>
-                            <Text>→戻る</Text>
+
                         </Menu>
                     </Flex>
                 </header>
