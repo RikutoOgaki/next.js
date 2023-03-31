@@ -7,7 +7,9 @@ import style from '@/styles/09/index.module.css'
 // 立体的な天気のアイコンを作る
 // 天気のさまざまな情報はstateで管理する
 
-
+type State = {
+    list: Array<string>
+}
 
 export default function Number09() {
 
@@ -17,12 +19,16 @@ export default function Number09() {
         <>
             <Box w={'100%'} h={'100vh'} className={style.body}>
                 <Header />
-                <Box as='main'>
-                    <Text padding={'10rem 0 0 4rem'} color={'#fff'}>
-                        <Text as='span' fontSize={'2rem'}>2</Text>
-                        月<Text as={'span'} fontSize={'2rem'}>1</Text>
-                        日の<Text as='span' fontSize={'2rem'}>東京</Text>
-                    </Text>
+                <Box as='main' padding={'5rem 0 0 2rem'}>
+                    <Flex color={'#fff'}>
+                        <Text>2月1日の</Text>
+                        <Box as='select' name="city" background={'none'}>
+                            <Box as='option' value='osaka'>大阪</Box>
+                            <Box as='option' value='nagoya'>名古屋</Box>
+                            <Box as='option' value='tokyo'>東京</Box>
+                        </Box>
+                    </Flex>
+
                     <Flex w={'100%'} h={'100%'} justifyContent={'center'} alignItems={'center'}>
                         <Box>
                             <Box className={style.boll}></Box>
