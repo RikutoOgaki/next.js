@@ -29,7 +29,7 @@ export default function Number11() {
                 if (weather === 'Clear sky') {
                     weather = '晴れ'
                 }
-                if (weather === 'rain') {
+                else if (weather === 'rain') {
                     weather = '雨'
                 }
                 else {
@@ -63,7 +63,7 @@ export default function Number11() {
                                             if (weather === 'Clear sky') {
                                                 weather = '晴れ'
                                             }
-                                            if (weather === 'rain') {
+                                            else if (weather === 'rain') {
                                                 weather = '雨'
                                             }
                                             else {
@@ -88,7 +88,7 @@ export default function Number11() {
                                             if (weather === 'Clear sky') {
                                                 weather = '晴れ'
                                             }
-                                            if (weather === 'rain') {
+                                            else if (weather === 'rain') {
                                                 weather = '雨'
                                             }
                                             else {
@@ -113,7 +113,7 @@ export default function Number11() {
                                             if (weather === 'Clear sky') {
                                                 weather = '晴れ'
                                             }
-                                            if (weather === 'rain') {
+                                            else if (weather === 'rain') {
                                                 weather = '雨'
                                             }
                                             else {
