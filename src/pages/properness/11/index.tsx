@@ -3,6 +3,10 @@ import { Box, Flex, Text, Select } from '@chakra-ui/react'
 import style from '@/styles/09/index.module.css'
 import Header from './components/Header'
 
+// したいこと
+// 天候によって天候に合ったイラストに変える
+// メニューを出したり隠したりできる
+
 type State = {
     weather: string,
     humidity: number,
