@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Box, Flex, Text, Select } from '@chakra-ui/react'
 import style from '@/styles/09/index.module.css'
 import Header from './components/Header'
@@ -19,7 +19,20 @@ export default function Number11() {
         temp: 0,
         city: ''
     })
-    // console.log(state.city);
+
+    useEffect(() => {
+        const APi = 'http://api.openweathermap.org/data/2.5/weather?q=Osaka&appid=4f17ae2f33d384ade5f214837f2b4d3d&lang=ja&units=metric'
+        fetch(APi)
+            .then(res => res.json())
+            .then(json => {
+                setState({
+                    ...state,
+                    weather: json.weather[0].main,
+                    humidity: json.main.humidity,
+                    temp: json.main.temp,
+                })
+            })
+    }, [])
 
 
     return (
@@ -29,39 +42,52 @@ export default function Number11() {
                 <Box as='main' padding={'5rem 0 0 2rem'}>
                     <Flex color={'#fff'}>
                         <Text lineHeight={'10'}>2月1日の</Text>
-                        {/* <Box as='select' value={state.city} name="city" background={'none'}>
-                            <Box as='option' value='osaka'>大阪</Box>
-                            <Box as='option' value='nagoya'>名古屋</Box>
-                            <Box as='option' value='tokyo'>東京</Box>
-                        </Box> */}
                         <Select w={'10rem'}
                             onChange={(e) => {
-                                setState({
-                                    ...state,
-                                    city: e.target.value
-                                })
-                                if (state.city === 'osaka') {
+                                if (e.target.value === 'osaka') {
                                     let APi = 'http://api.openweathermap.org/data/2.5/weather?q=Osaka&appid=4f17ae2f33d384ade5f214837f2b4d3d&lang=ja&units=metric'
                                     fetch(APi)
                                         .then(res => res.json())
                                         .then(json => {
-                                            console.log(json);
+                                            setState(() => {
+                                                return {
+                                                    ...state,
+                                                    weather: json.weather[0].main,
+                                                    humidity: json.main.humidity,
+                                                    temp: json.main.temp,
+                                                }
+                                            })
                                         })
                                 }
-                                else if (state.city === 'nagoya') {
+                                else if (e.target.value === 'nagoya') {
                                     let APi = 'http://api.openweathermap.org/data/2.5/weather?q=Nagoya&appid=4f17ae2f33d384ade5f214837f2b4d3d&lang=ja&units=metric'
                                     fetch(APi)
                                         .then(res => res.json())
                                         .then(json => {
-                                            console.log(json);
+                                            setState(() => {
+                                                return {
+                                                    ...state,
+                                                    weather: json.weather[0].main,
+                                                    humidity: json.main.humidity,
+                                                    temp: json.main.temp,
+                                                }
+                                            })
                                         })
                                 }
-                                else if (state.city) {
-                                    let APi = 'http://api.openweathermap.org/data/2.5/weather?q=Nagoya&appid=4f17ae2f33d384ade5f214837f2b4d3d&lang=ja&units=metric'
+                                else if (e.target.value === 'tokyo') {
+                                    let APi = 'http://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=4f17ae2f33d384ade5f214837f2b4d3d&lang=ja&units=metric'
                                     fetch(APi)
                                         .then(res => res.json())
                                         .then(json => {
-                                            console.log(json);
+                                            setState(() => {
+
+                                                return {
+                                                    ...state,
+                                                    weather: json.weather[0].main,
+                                                    humidity: json.main.humidity,
+                                                    temp: json.main.temp,
+                                                }
+                                            })
                                         })
                                 }
                             }}
