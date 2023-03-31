@@ -25,9 +25,19 @@ export default function Number11() {
         fetch(APi)
             .then(res => res.json())
             .then(json => {
+                let weather = json.weather[0].main
+                if (weather === 'Clear sky') {
+                    weather = '晴れ'
+                }
+                if (weather === 'rain') {
+                    weather = '雨'
+                }
+                else {
+                    weather = '曇り'
+                }
                 setState({
                     ...state,
-                    weather: json.weather[0].main,
+                    weather: weather,
                     humidity: json.main.humidity,
                     temp: Math.floor(json.main.temp),
                 })
@@ -49,10 +59,20 @@ export default function Number11() {
                                     fetch(APi)
                                         .then(res => res.json())
                                         .then(json => {
+                                            let weather = json.weather[0].main
+                                            if (weather === 'Clear sky') {
+                                                weather = '晴れ'
+                                            }
+                                            if (weather === 'rain') {
+                                                weather = '雨'
+                                            }
+                                            else {
+                                                weather = '曇り'
+                                            }
                                             setState(() => {
                                                 return {
                                                     ...state,
-                                                    weather: json.weather[0].main,
+                                                    weather: weather,
                                                     humidity: json.main.humidity,
                                                     temp: Math.floor(json.main.temp),
                                                 }
@@ -64,10 +84,20 @@ export default function Number11() {
                                     fetch(APi)
                                         .then(res => res.json())
                                         .then(json => {
+                                            let weather = json.weather[0].main
+                                            if (weather === 'Clear sky') {
+                                                weather = '晴れ'
+                                            }
+                                            if (weather === 'rain') {
+                                                weather = '雨'
+                                            }
+                                            else {
+                                                weather = '曇り'
+                                            }
                                             setState(() => {
                                                 return {
                                                     ...state,
-                                                    weather: json.weather[0].main,
+                                                    weather: weather,
                                                     humidity: json.main.humidity,
                                                     temp: Math.floor(json.main.temp),
                                                 }
@@ -79,10 +109,20 @@ export default function Number11() {
                                     fetch(APi)
                                         .then(res => res.json())
                                         .then(json => {
+                                            let weather = json.weather[0].main
+                                            if (weather === 'Clear sky') {
+                                                weather = '晴れ'
+                                            }
+                                            if (weather === 'rain') {
+                                                weather = '雨'
+                                            }
+                                            else {
+                                                weather = '曇り'
+                                            }
                                             setState(() => {
                                                 return {
                                                     ...state,
-                                                    weather: json.weather[0].main,
+                                                    weather: weather,
                                                     humidity: json.main.humidity,
                                                     temp: Math.floor(json.main.temp),
                                                 }
