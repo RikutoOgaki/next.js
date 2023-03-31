@@ -6,8 +6,7 @@ import Header from './components/Header'
 type State = {
     weather: string,
     humidity: number,
-    temp: number,
-    city: string
+    temp: number
 }
 
 
@@ -16,8 +15,7 @@ export default function Number11() {
     const [state, setState] = useState<State>({
         weather: '',
         humidity: 0,
-        temp: 0,
-        city: ''
+        temp: 0
     })
 
     useEffect(() => {
