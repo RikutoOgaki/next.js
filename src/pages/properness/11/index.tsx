@@ -29,7 +29,7 @@ export default function Number11() {
                     ...state,
                     weather: json.weather[0].main,
                     humidity: json.main.humidity,
-                    temp: json.main.temp,
+                    temp: Math.floor(json.main.temp),
                 })
             })
     }, [])
@@ -54,7 +54,7 @@ export default function Number11() {
                                                     ...state,
                                                     weather: json.weather[0].main,
                                                     humidity: json.main.humidity,
-                                                    temp: json.main.temp,
+                                                    temp: Math.floor(json.main.temp),
                                                 }
                                             })
                                         })
@@ -69,7 +69,7 @@ export default function Number11() {
                                                     ...state,
                                                     weather: json.weather[0].main,
                                                     humidity: json.main.humidity,
-                                                    temp: json.main.temp,
+                                                    temp: Math.floor(json.main.temp),
                                                 }
                                             })
                                         })
@@ -80,12 +80,11 @@ export default function Number11() {
                                         .then(res => res.json())
                                         .then(json => {
                                             setState(() => {
-
                                                 return {
                                                     ...state,
                                                     weather: json.weather[0].main,
                                                     humidity: json.main.humidity,
-                                                    temp: json.main.temp,
+                                                    temp: Math.floor(json.main.temp),
                                                 }
                                             })
                                         })
